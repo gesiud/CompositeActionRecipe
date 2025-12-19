@@ -8,10 +8,11 @@ inputs:
     default: "Świat"
 
 runs:
-  using: "ubuntu-latest"
+  using: "composite"
   steps:
     - name: Akcja 2
       id: akcja-2
+      shell: bash
       run: |
         echo "Witaj '${{ inputs.user }}'".
         echo "xxx=111" >> $GITHUB_OUTPUT

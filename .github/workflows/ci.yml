@@ -14,3 +14,6 @@ jobs:
 
       - name: Output the answer (wypisz odpowiedź)
         run: echo "Odpowiedź to ${{ steps.my-action.outputs.answer }}"
+
+      - name: test akcji 2
+        uses: ./action-2

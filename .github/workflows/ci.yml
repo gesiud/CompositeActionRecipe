@@ -1,5 +1,9 @@
 name: CI workflow (przeplyw pracy CI)
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  issues:
+    types: [opened]
 
 jobs:
   ci-job:
@@ -19,3 +23,8 @@ jobs:
         uses: ./action-2
         with:
           user: "@gesiud"
+
+      - name: test akcji 3
+        uses: ./action-3
+        with:
+          who-to-greet: "@gesiud"

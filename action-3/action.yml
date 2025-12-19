@@ -1,16 +1,28 @@
-name: Awesome github script action
-uses: actions/github-script@v6
-with:
-  script: |
-    var whoToGreet = core.getInput("who-to-greet")
-    core.notice(`Hello ${whoToGreet}`)
-    core.setOutput('answer', 42);
+name: "Receptura akcji złożonej 3"
+description: "Pusty opis akcji 3"
 
-    if(context.eventName === 'issues') {
-      github.rest.issues.createComment({
-        issue_number: context.isue.number,
-        owner: context.repo.owner,
-        repo: context.repo.repo,
-        body: `👋 ${whoToGreet}`
-      })  
-    }
+inputs:
+  who-to-greet:
+    description: "Kogo pozdrowić"
+    required: true
+    default: "Świat"
+
+runs:
+  using: "composite"
+  steps:
+    - name: "Akcja 3"
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const whoToGreet = core.getInput("who-to-greet");
+          core.notice(`Hello ${whoToGreet}`);
+          core.setOutput('answer', 42);
+
+          if (context.eventName === 'issues') {
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `👋 ${whoToGreet}`
+            });
+          }

@@ -1,0 +1,12 @@
+name: "Receptura akcji złożonej 2"
+description: "Nic nie robi tylko listuje "
+
+runs:
+  using: "ubuntu-latest"
+  steps:
+    - name: Akcja 2
+      id: akcja-2
+      run: |
+        echo "Witaj '${{ @gesiud }}'".
+        echo "xxx=111" >> $GITHUB_OUTPUT
+        echo "Do widzenia".

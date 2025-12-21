@@ -19,7 +19,7 @@ body:
       label: "Nazwa"
       description: "Name of the repository in lower-case and kebab casing"
       placeholder: "your-name-kebab"
-    validators:
+    validations:
       required: true
 
   - type: dropdown
@@ -31,5 +31,5 @@ body:
       options:
         - dep 1
         - dep 2
-      valiators:
-        required: true
+    validations:
+      required: true

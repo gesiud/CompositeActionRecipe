@@ -1,0 +1,30 @@
+name: "🐞 Bug report"
+description: "Report a bug"
+title: "New bug report"
+labels:
+  - "bug"
+  - "issue-ops"
+assignees:
+  - "gesiud"
+projects: "gesiud/testowy projekt"
+body:
+  - type: input
+    id: name
+    attributes:
+      label: "Nazwa"
+      description: "Name of the repository in lower-case and kebab casing"
+      placeholder: "your-name-kebab"
+    validators:
+      required: true
+
+  - type: dropdown
+    id: departament
+    attributes:
+      label: "Departament"
+      description: "Select departament"
+      multiple: false
+      options:
+        - dep 1
+        - dep 2
+    validations:
+      required: true

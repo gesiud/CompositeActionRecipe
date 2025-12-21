@@ -1,1 +1,5 @@
 blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/gesiud/CompositeActionRecipe/discussions
+    about: "Użyj dyskusji kurwa!"

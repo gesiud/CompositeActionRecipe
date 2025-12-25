@@ -17,6 +17,9 @@ jobs:
       REPO_NAME: ${{ steps.repo-request.outputs.REPO_NAME }}
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Issue Forms Body Parser
         id: parse
         uses: zentered/issue-forms-body-parser@v2.0.0
